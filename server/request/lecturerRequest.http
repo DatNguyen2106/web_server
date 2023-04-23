@@ -1,0 +1,334 @@
+###
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username" : "tiffany",
+    "password" : "23483"
+}
+
+###
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username" : "romein",
+    "password" : "20489"
+}
+
+###
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username" : "mikadang",
+    "password" : "22323"
+}
+###
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username" : "walther",
+    "password" : "26029"
+}
+###
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username" : "longle",
+    "password" : "21933"
+}
+###
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username" : "alexnguyen",
+    "password" : "21029"
+}
+###
+POST http://localhost:5000/lecturer1/get/theses
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEwMjksInVzZXJuYW1lIjoiYWxleG5ndXllbiIsInJvbGUiOiJbXCJsZWN0dXJlcjEuMVwiXSIsImlhdCI6MTY4MTkyMjI4NiwiZXhwIjoxNjgxOTIzMTg2fQ.vqcbKue7pDCtPOqI2X933AY4puygoS86S3bLL8ENCLI
+
+###
+POST http://localhost:5000/lecturer1/add/thesis
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2ODE5MjI3MDEsImV4cCI6MTY4MTkyMzYwMX0.mkadRO0hqtngtZbHE2Y6jh_1Pqi6uonOEcgQh1ATo1E
+Content-Type: application/json
+
+{
+    "thesisTopic" : "Data test",
+    "thesisField" : "Data test field",
+    "slotMaximum" : 2
+}
+
+###
+POST http://localhost:5000/lecturer1/get/theses
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEwMjksInVzZXJuYW1lIjoiYWxleG5ndXllbiIsInJvbGUiOiJbXCJsZWN0dXJlcjEuMVwiXSIsImlhdCI6MTY4MTkyMjIxMywiZXhwIjoxNjgxOTIzMTEzfQ.K5XfkVvpJ7sJDF8mz8ohRf8g7gPtcisMEH5auAIge5k
+Content-Type: application/json
+
+{
+    "thesisTopic" : "",
+    "thesisField" : "",
+    "lecturer1Title" : "",
+    "lecturer2Title" : "",
+    "step" : "",
+    "slot" : "",
+    "slotMaximum" : "",
+    "wasDefended" : false,
+    "page" : 1
+}
+
+###
+POST http://localhost:5000/lecturer2/get/theses
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjA0ODksInVzZXJuYW1lIjoicm9tZWluIiwicm9sZSI6IltcImxlY3R1cmVyMlwiXSIsImlhdCI6MTY3NTkxODAwNywiZXhwIjoxNjc1OTE4OTA3fQ.lEOpFvEwH6iSyh_sAXNpzwYLFsQhE1hB_Z8LnPEV-bY
+Content-Type: application/json
+
+{
+    "thesisTopic" : "",
+    "thesisField" : "",
+    "lecturer1Title" : "e",
+    "step" : "",
+    "slot" : "",
+    "slotMaximum" : "",
+    "confirmSup2" : "",
+    "wasDefended" : false,
+    "page" : 1
+}
+
+
+###
+GET http://localhost:5000/lecturer1/get/thesis/123342
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEwMjksInVzZXJuYW1lIjoiYWxleG5ndXllbiIsInJvbGUiOiJbXCJsZWN0dXJlcjEuMVwiXSIsImlhdCI6MTY4MDA5Mjc5OCwiZXhwIjoxNjgwMDkzNjk4fQ.7q-h0ADc2IveSE2h8nQmRmR2XcCB81--_EWfFEnwQ80
+
+###
+GET http://localhost:5000/lecturer2/get/thesis/210292
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjM0ODMsInVzZXJuYW1lIjoidGlmZmFueSIsInJvbGUiOiJbXCJsZWN0dXJlcjEuMVwiXSIsImlhdCI6MTY3MzUxMTk2OCwiZXhwIjoxNjczNTEyODY4fQ.ZbhbW_E_3N18s77gl56WqHYklosIVKcMcYOtJVUOEl8
+
+###
+POST http://localhost:5000/lecturer1/confirm/confirmStudent
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEwMjksInVzZXJuYW1lIjoiYWxleG5ndXllbiIsInJvbGUiOiJbXCJsZWN0dXJlcjEuMVwiXSIsImlhdCI6MTY3OTAzNzk1NSwiZXhwIjoxNjc5MDM4ODU1fQ.J02ObJt-7ubF5khUS8UpJpVSjKru_mVW_PVslqtJAY4
+
+{
+    "studentId" : 15345,
+    "confirmStudent" : false
+}
+
+###
+POST http://localhost:5000/lecturer2/confirm/confirmThesis
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjIzMjMsInVzZXJuYW1lIjoibWlrYWRhbmciLCJyb2xlIjoiW1wibGVjdHVyZXIyXCJdIiwiaWF0IjoxNjgwMTA2NjYwLCJleHAiOjE2ODAxMDc1NjB9.XeFyhC6SZeYNkpU1g6WqtVd8OheilJqd1GyWqkcxO5E
+Content-Type: application/json
+
+{
+    "thesisId" : 123554,
+    "confirmThesis" : true
+}
+###confirm thesis
+POST http://localhost:5000/lecturer1/confirm/confirmThesis
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjE5MzMsInVzZXJuYW1lIjoibG9uZ2xlIiwicm9sZSI6IltcImxlY3R1cmVyMS4yXCJdIiwiaWF0IjoxNjgwMTA1NzkxLCJleHAiOjE2ODAxMDY2OTF9.Kue1cKG99F0dQPTk5HeZWQy4g3pxqWVxYPEg689ICuw
+Content-Type: application/json
+
+{
+    "thesisId" : 123122,
+    "confirmThesis" : true
+}
+
+###registrationBachelorThesisAsSup1
+POST http://localhost:5000/lecturer1/signIn/registrationBachelorThesisAsSup1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjM0ODMsInVzZXJuYW1lIjoidGlmZmFueSIsInJvbGUiOiJbXCJsZWN0dXJlcjEuMVwiXSIsImlhdCI6MTY4MDEwMTcyNCwiZXhwIjoxNjgwMTAyNjI0fQ.4gI21se2jha8QjpO51R-1iuFW3W6T2-6zneerbzhgsM
+Content-Type: application/json
+
+{
+    "studentId" : 18593,
+    "confirmSignature" : true
+}
+###
+POST http://localhost:5000/lecturer1/signIn/registrationBachelorThesisAsSup2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEwMjksInVzZXJuYW1lIjoiYWxleG5ndXllbiIsInJvbGUiOiJbXCJsZWN0dXJlcjEuMVwiXSIsImlhdCI6MTY4MDE2MTc5OCwiZXhwIjoxNjgwMTYyNjk4fQ.cOgkbIGVUGIKanLOr9mdxzGcz-95iSd8j6raRZR-M1w
+Content-Type: application/json
+
+{
+    "studentId" : 18593,
+    "confirmSignature" : true
+}
+
+
+###
+POST http://localhost:5000/lecturer2/signIn/registrationBachelorThesis
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjIzMjMsInVzZXJuYW1lIjoibWlrYWRhbmciLCJyb2xlIjoiW1wibGVjdHVyZXIyXCJdIiwiaWF0IjoxNjgwMTYxODQzLCJleHAiOjE2ODAxNjI3NDN9._bQaDPYEMZSuwDE36ayKxv3aI7CBQy-JONEMKrWUS3I
+Content-Type: application/json
+
+{
+    "studentId" : 12345,
+    "confirmSignature" : true
+}
+
+
+###
+PUT http://localhost:5000/lecturer1/update/assessmentBachelor
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEwMjksInVzZXJuYW1lIjoiYWxleG5ndXllbiIsInJvbGUiOiJbXCJsZWN0dXJlcjEuMVwiXSIsImlhdCI6MTY4MDE2NTQxMCwiZXhwIjoxNjgwMTY2MzEwfQ.npz9dPAz2reRZUHat6E1ppERNCl8Cjy3Kt1ksvaG8_c
+Content-Type: application/json
+
+{
+    "studentId" : 12323,
+    "matriculationNumber" : 1238432,
+    "surName" : "phannguyen1",
+    "foreName" : "long1",
+    "thesisTitle" : "title 12211 update lecturer1",
+    "thesisType" : "1",
+    "furtherParticipants" : "dat",
+    "supervisor1_title" : "Prof. Huynh Trung Hieu of lecturer1 ",
+    "supervisor1_grade" : 1.5,
+    "supervisor2_title" : "Master Huynh Nguyen of lec1",
+    "supervisor2_grade" : 1.2,
+    "assessmentThesis" : "This is assessment Thesis lec1",
+    "assessmentDate" : "2022-12-29"
+}
+
+###
+PUT http://localhost:5000/lecturer1/update/assessmentOralDefense
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEwMjksInVzZXJuYW1lIjoiYWxleG5ndXllbiIsInJvbGUiOiJbXCJsZWN0dXJlcjEuMVwiXSIsImlhdCI6MTY4MDE2Mzc2MSwiZXhwIjoxNjgwMTY0NjYxfQ.1iJlDikDOSAoy5VoAbneNOkExXiA_D08ZfBMELMQwxs
+Content-Type: application/json
+
+{
+    "studentId" : 12323,
+    "matriculationNumber" : 1238432,
+    "surName" : "phannguyen1_test",
+    "foreName" : "long1_test",
+    "dateDefense" : "2023-03-19",
+    "placeDefense" : "HCM city",
+    "startDate" : "2022-12-29",
+    "finishDate" : "2023-03-19",
+    "stateOfHealth" : 1,
+    "supervisor1_title" : "Prof Huynh Trung Hieu of lecturer1",
+    "supervisor1_grade" : 1.1,
+    "supervisor2_title" : "Master Huynh Nguyen of lec1", 
+    "supervisor2_grade" : 1.3,
+    "record" : "This is record",
+    "assessmentDate" : "2023-03-19"
+}
+
+###
+PUT http://localhost:5000/lecturer2/update/assessmentBachelor
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjIzMjMsInVzZXJuYW1lIjoibWlrYWRhbmciLCJyb2xlIjoiW1wibGVjdHVyZXIyXCJdIiwiaWF0IjoxNjgwMTY1NDQ2LCJleHAiOjE2ODAxNjYzNDZ9.ihdjsZWHZHGd9pxkSiY5SLXnvOBQ8wLCaIko57x_7pc
+Content-Type: application/json
+
+{
+    "studentId" : 18593,
+    "matriculationNumber" : 1238432,
+    "surName" : "phannguyen12",
+    "foreName" : "long",
+    "thesisTitle" : "thesis title 2",
+    "thesisType" : "1",
+    "furtherParticipants" : "",
+    "supervisor1_title" : "Prof. Huynh Trung Hieu 2",
+    "supervisor1_grade" : 1.1,
+    "supervisor2_title" : "Master Huynh Nguyen 2",
+    "supervisor2_grade" : 1.1,
+    "assessmentThesis" : "This is assessment Thesis test for lecturer2",
+    "assessmentDate" : "2022-12-29"
+}
+
+###
+PUT http://localhost:5000/lecturer2/update/assessmentOralDefense
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjIzMjMsInVzZXJuYW1lIjoibWlrYWRhbmciLCJyb2xlIjoiW1wibGVjdHVyZXIyXCJdIiwiaWF0IjoxNjgwMTY1NDQ2LCJleHAiOjE2ODAxNjYzNDZ9.ihdjsZWHZHGd9pxkSiY5SLXnvOBQ8wLCaIko57x_7pc
+Content-Type: application/json
+
+{
+    "studentId" : 18593,
+    "matriculationNumber" : 1238432,
+    "surName" : "phannguyen",
+    "foreName" : "long",
+    "dateDefense" : "2023-03-19",
+    "placeDefense" : "HCM city",
+    "startDate" : "2022-12-29",
+    "finishDate" : "2023-03-19",
+    "stateOfHealth" : 1,
+    "supervisor1_title" : "Prof Huynh Trung Hieu 2",
+    "supervisor1_grade" : 1.2,
+    "supervisor2_title" : "Master Huynh Nguyen 2", 
+    "supervisor2_grade" : 1.2,
+    "record" : "This is record 2",
+    "assessmentDate" : "2023-03-19"
+}
+
+###
+GET http://localhost:5000/lecturer1/get/account
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjM0ODMsInVzZXJuYW1lIjoidGlmZmFueSIsInJvbGUiOiJbXCJsZWN0dXJlcjEuMVwiXSIsImlhdCI6MTY3NTgzNTY0NiwiZXhwIjoxNjc1ODM2NTQ2fQ.c8udrhXzroy2XH15DYBmimgM29LyTiU5PHV84yfeklE
+
+###
+GET http://localhost:5000/lecturer2/get/account
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjA0ODksInVzZXJuYW1lIjoicm9tZWluIiwicm9sZSI6IltcImxlY3R1cmVyMlwiXSIsImlhdCI6MTY3NTgzNTg2MCwiZXhwIjoxNjc1ODM2NzYwfQ.86SSu4cZDZ93Mbyl-uhMpGz2jFCZfWY6Il6ZoToK_Gs
+
+###
+PUT http://localhost:5000/lecturer1/update/account
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEwMjksInVzZXJuYW1lIjoiYWxleG5ndXllbiIsInJvbGUiOiJbXCJsZWN0dXJlcjEuMVwiXSIsImlhdCI6MTY3NTg2NTY0NSwiZXhwIjoxNjc1ODY2NTQ1fQ.eudyBcZujAvI6v3p9I0rS7gCKaP9VdJq2JGfMv2tYgs
+Content-Type: application/json
+
+{
+    "title" : "Dr.Test 1",
+    "email" : "sadl@gmail.com",
+    "maximum_of_theses" : 1,
+    "bio" : "This is test for 1",
+    "signature" : "singature"
+}
+
+###
+PUT http://localhost:5000/lecturer2/update/account
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEwMjksInVzZXJuYW1lIjoiYWxleG5ndXllbiIsInJvbGUiOiJbXCJsZWN0dXJlcjEuMVwiXSIsImlhdCI6MTY3NTg2NTY0NSwiZXhwIjoxNjc1ODY2NTQ1fQ.eudyBcZujAvI6v3p9I0rS7gCKaP9VdJq2JGfMv2tYgs
+Content-Type: application/json
+
+{
+    "title" : "Dr.Test 1",
+    "email" : "sadl@gmail.com",
+    "maximum_of_theses" : 1,
+    "bio" : "This is test for 1",
+    "signature" : "singature"
+}
+###
+PUT http://localhost:5000/lecturer1/update/signature
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2NzIwNjQ1MDgsImV4cCI6MTY3MjA2NTQwOH0.RPwHQDP0Z8YfmkaiFBQ0Hd8rrZgJYJMo_9RaQF2k-fg
+Content-Type: application/json
+
+{
+    "signature" : "data:image/png;base64,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"
+}
+
+###
+PUT http://localhost:5000/lecturer2/update/signature
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjA0ODksInVzZXJuYW1lIjoicm9tZWluIiwicm9sZSI6IltcImxlY3R1cmVyMlwiXSIsImlhdCI6MTY3OTEyNzMwOCwiZXhwIjoxNjc5MTI4MjA4fQ.cJfQ-0WJKgtByBVwuL5ce1QVZTZZOYV-E7YeG4nCJ6o
+Content-Type: application/json
+
+{
+    "signature" : "data:image/png;base64,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"
+}
+
+###
+PUT http://localhost:5000/lecturer1/modify/thesis
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEwMjksInVzZXJuYW1lIjoiYWxleG5ndXllbiIsInJvbGUiOiJbXCJsZWN0dXJlcjEuMVwiXSIsImlhdCI6MTY4MTI4NTgyMCwiZXhwIjoxNjgxMjg2NzIwfQ.tb2LEYIAaysbOVQzm7ea61e2b3KG8IoS83-QKiwT_tY
+Content-Type: application/json
+
+{
+    "thesisId" : 210291,
+    "thesisTopic" : "Topic test",
+    "thesisField" : "Field test"
+}
+
+###
+GET http://localhost:5000/lecturer1/get/testForm/12486
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjM0ODMsInVzZXJuYW1lIjoidGlmZmFueSIsInJvbGUiOiJbXCJsZWN0dXJlcjEuMVwiXSIsImlhdCI6MTY3ODk4NzcxNCwiZXhwIjoxNjc4OTg4NjE0fQ.5-27Aw8UjIev1HOfRBQH4ym0JTSHOrsqq2_D--lrBKA
+
+###
+GET http://localhost:5000/lecturer2/get/testForm/12486
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjA0ODksInVzZXJuYW1lIjoicm9tZWluIiwicm9sZSI6IltcImxlY3R1cmVyMlwiXSIsImlhdCI6MTY3ODk4NzkzOCwiZXhwIjoxNjc4OTg4ODM4fQ.1gnaX7vRPRq9sdqQlI8KLq4geW6SAT0Ang4PNzggz40
+
+###
+DELETE http://localhost:5000/lecturer1/delete/thesis/210291
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjE5MzMsInVzZXJuYW1lIjoibG9uZ2xlIiwicm9sZSI6IltcImxlY3R1cmVyMS4yXCJdIiwiaWF0IjoxNjgxMjg3OTM5LCJleHAiOjE2ODEyODg4Mzl9.2MFWnheld66H_n3VGEhPBxYWe4c5_8UoeDTE3EJgBoo
