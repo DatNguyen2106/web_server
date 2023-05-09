@@ -1,0 +1,177 @@
+###
+POST http://localhost:4000/signup
+Content-Type: application/json
+
+{
+    "id" : "100002",
+    "username" : "test1",
+    "password" : "100002",
+    "role" : ["admin"]
+}
+###
+POST http://localhost:4000/signup
+Content-Type: application/json
+
+{
+    "id" : "12365",
+    "username" : "test",
+    "password" : "12365",
+    "role" : ["student"]
+}
+
+###
+POST http://localhost:4000/signup
+Content-Type: application/json
+
+{
+    "id" : "100001",
+    "username" : "test1",
+    "password" : "100001",
+    "role" : ["admin"]
+}
+###
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username" : "lukas",
+    "password" : "30000"
+}
+
+###
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username" : "admin",
+    "password" : "100000"
+}
+###
+GET http://localhost:5000/getNotifications
+Authorization: Bearer eeyJhbGciOiJIUzI1NibGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2ODE5MjE4NTAsImV4cCI6MTY4MTkyMjc1MH0.p4hKpQ1LOKe7bMm6E-5p8tC4Bvzvq2IGFyVz9AQBayw
+
+###
+GET http://localhost:4000/roles
+Authorization: Bearer eyJhbGciOiJIUzI1NihbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMwMDAwIiwidXNlcm5hbWUiOiJsdWthcyIsInJvbGUiOiJbXCJhZG1pblwiXSIsImlhdCI6MTY2NjgwMDI5MCwiZXhwIjoxNjY2ODAwMzIwfQ.gZgsEh7TR89gz8yuA0iwrkx9Pw7xzbu4pOBNx6tJuyk
+###
+POST http://localhost:4000/token
+Content-Type: application/json
+
+{
+    "refreshToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsInVzZXJuYW1lIjoiamFtZXMxMDMiLCJyb2xlIjoiW1wiYWRtaW5cIixcImxlY3R1cmVyMlwiXSIsImlhdCI6MTY2NjQzNTE5MCwiZXhwIjoxNjY2NDM4NzkwfQ.hKxDcBkq15hNjD9W8TPp1uErxPpG1TTGGIW0-DQjYVU"
+}
+
+###
+GET http://localhost:5000/admin/get/test
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2ODE5MjE4NTAsImV4cCI6MTY4MTkyMjc1MH0.p4hKpQ1LOKe7bMm6E-5p8tC4Bvzvq2IGFyVz9AQBayw
+
+###
+GET http://localhost:5000/admin/get1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJqYW1lczIiLCJyb2xlIjoibGVjdHVyZXIxIiwiaWF0IjoxNjY2NDE2NzkxLCJleHAiOjE2NjY0MTY4MjF9.TxOqq6TGCqAkuNVt3ARtDaiARcHPKfib1sumYLa8zq4
+
+###
+GET http://localhost:5000/admin/get2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2ODE5MjE4NTAsImV4cCI6MTY4MTkyMjc1MH0.p4hKpQ1LOKe7bMm6E-5p8tC4Bvzvq2IGFyVz9AQBayw
+
+
+###
+GET http://localhost:5000/lecturer1/get
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwidXNlcm5hbWUiOiJqYW1lczEwMSIsInJvbGUiOiJbXCJhZG1pblwiLFwibGVjdHVyZXIxXCJdIiwiaWF0IjoxNjY2NTk2MTk5LCJleHAiOjE2NjY1OTYyMjl9.U_ZoOcD-xWn9R2yhbM8WRU7BwZJF-GfU-GH8WYLOJdw
+
+###
+GET http://localhost:5000/lecturer2/get
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIiLCJ1c2VybmFtZSI6ImphbWVzMiIsInJvbGUiOiJbXCJsZWN0dXJlcjFcIl0iLCJpYXQiOjE2NjY2MjY1MjMsImV4cCI6MTY2NjYyNjU1M30.bYNN6iVuF1iK3v7HNIyH9q03sCDJWYJ5gtJ9Xl-D9gs
+
+
+###
+GET http://localhost:5000/admin/get/student/19363
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2ODE5MjE1OTEsImV4cCI6MTY4MTkyMjQ5MX0.rx45jkqaKXllaHvMldLrGzSNguy7sw8bIjtjQbpiuZ
+
+###
+GET http://localhost:5000/lecturer2/test
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgiLCJ1c2VybmFtZSI6ImphbWVzMTAzIiwicm9sZSI6IltcImFkbWluXCIsXCJsZWN0dXJlcjJcIl0iLCJpYXQiOjE2NjY2MDM2MTEsImV4cCI6MTY2NjYwMzY0MX0.0ujQRh5zLzW3bm3qAEZmHy5bBMStDsCwzMYIfHHju2k
+
+###
+POST http://localhost:5000/admin/get/lecturers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDAwLCJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6IltcImFkbWluXCJdIiwiaWF0IjoxNjgyMjY5NDg0LCJleHAiOjE2ODIyNzAzODR9.Zit9uXcMX7k0FkPdQdiTtb8BTOmJEZ2TeNB6sdNG93c
+Content-Type: application/json
+
+{
+    "id" : "",
+    "username" : "",
+    "title" : "",
+    "email" : "",
+    "supervisor" : "",
+    "maximumTheses" : "",
+    "page" : "2"
+}
+###
+POST http://localhost:5000/admin/update/signature
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDAwLCJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6IltcImFkbWluXCJdIiwiaWF0IjoxNjgxMTkzODA3LCJleHAiOjE2ODExOTQ3MDd9.QSQ4nbRh8VnAut3YCqF3qUnhyPFASF8aAeS3meNrYiQ
+Content-Type: application/json
+
+{
+    "signature" : "this is signature test"
+}
+
+###
+GET http://localhost:5000/admin/get/signature
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2NzIwNjU3NjgsImV4cCI6MTY3MjA2NjY2OH0.fdhtVyRAPSp5Ecii30rNDkzFlrGYK1KkPwZECYv_fgE
+
+
+###
+POST http://localhost:5000/admin/add/lecturer
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDAwLCJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6IltcImFkbWluXCJdIiwiaWF0IjoxNjgyMDkyNDU1LCJleHAiOjE2ODIwOTMzNTV9.uJEaynIz7Z3MEVMMDf-FmjuZGdI8eP0YDCvtymefZT4
+Content-Type: application/json
+
+{
+    "id" : 21493,
+    "username" : "haotran1133",
+    "email" : "haotran@gmail.com",
+    "title" : "Dr. Hao Tran d",
+    "supervisor" : "lecturer1.2",
+    "signature" : "signature",
+    "bio" : "this is new bio"
+}
+
+###
+PUT http://localhost:5000/admin/update/lecturer/21029
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2ODExNDY2MTMsImV4cCI6MTY4MTE0NzUxM30.LpWIzql2bA9Tvl4dm-yIgQ46f38JYW_Jakh5QMC6Ol0
+Content-Type: application/json
+
+{
+    "username" : "alexnguyen",
+    "fullname" : "linhkhanhtran_updateee",
+    "title" : "Dr. Linh Ngoc",
+    "email" : "linh1@gmail.com",
+    "supervisor" : "lecturer1.1",
+    "signature" : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAcCAYAAADm63ZmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAUXSURBVFhHzVZZKG5fFF/fdw1d4yVzNyGuInMKSR6I4oW8IU8kCeFJGZIXD0Q8KjK8kPKmK0ooQ8g8z8l0zeM1nnt+637b//gM/YtbfrXa5+y99lprr2lvlSSDPhnUmvFT4VMa9Wr4/k9UVSqV5utj8aqnHh4eHkkJ/MNgMf4LvBk+YZRQrhz/lZeAJ+ETn+fn5zQ1NUX7+/s0OTlJ/v7+bNz9/T25urqSlZUVGRgYkFr99EwfZegTo6B4eHiYCgoKyNDQkA3Cd0BAAF1cXFBLSwttbGzQ1dUVZWVlUWBgIO+DCBj4Yd6DUQLr6+tSTEyM1NbWJg0MDEjR0dHSwcGBJHtIuru7k25ubiTZOKm3t1dKSUmRmpubpevra16TD6SR8n7AOywQlJqaKtXU1LDyjo4O6efPn2yQWIfy29tbnjs8PJSSkpKkpqYmNkwp571Qy8RhQ3gwRkRE0JcvX0g2gExNTTX+/AuECGsI07dv36ikpISGhoZoYWGBQ4j9AL7fA85UKNne3mZh1tbWvADlQgnWtQmws7OjxMREKi8vp5OTEzb6vQYBaqEABjg4OLBCCNbR0aFfv369qQS8P378IDnvaHV1VTP7fnD4hGKEDIAyVJ+cX/T792+eewk4CPjS0tKos7Pz0bMvATrQUsAj5ywdHR3xP0j74Owp0NevX2l6eprkpGUmNzc3nj8+PtawPofoU0FBQXR6evqmUQDkAWtra1RcXMzGafc6gD0F2NrakomJCckVx8L19fVJT0+PxsfH2UhtAsQIwZubmyRXJv8DL/EL4F/wijUlnyxPzUJ1dXUpIyOD5N5Dg4ODPBcbG8sGguBmuFypQHhZm8Aj9olv7X0ibMp1Mepo+Bju7u5UWlpKmZmZ5OjoyBWJcHZ3dzMzQllRUUFGRkaaHf8B6y/hrXnlIcQ/8OSagfUAqmlxcZE9dnl5yXcfQgtDLS0tn+UBeLKzs6myspLOzs5Ibry0srLCa05OThQXF8eRQMhwVfX09HB/CwkJ4daDtuLt7c2GceR4pwZgAOHCxb3m4+NDnp6e3FDxb2Nj89g8AXFCVC0uahwqJyeHCyYqKoqptraW5OuL+dFmwsLCuCiCg4PJ19eXvLy8Hpu0kPs89RUAE+L8FmAUehS8hWqCksLCQj65h4cHHwYFA0CemZkZmZubU3JyMntIvqo4Ako86VPiW9Du7i6f7jWAB4r6+/s59+T7kPMNoRKAZxES8AJzc3McOlQ79ir1CbCnMKHtEYSkurqa302vAULBt7e3R5GRkdTe3s75qFQg8hTAPJoxvIq9SggDATYKE4IJC6DZ2VlycXHhJH8L8CaaIa4bhEkIFiMOhW8hv6+vjx0gjACJViAKSI2Jra0tTs6ZmRk2Znl5mRobGyk9PZ2vEbFZSQC81NXVxXmEPAkPD2cZeBzCI/X19dTa2soPQ1QevDgyMsIHFe1mYmKCqqqqWJ6Qq1paWsI7ihISEjgfUM5CKMocZYuXA06G/ABwEIQFlYUcKSoq4pYBobgBysrK6Pv379xsUbF4zYpWgqpzdnamuro6srCw4DyMj4+n0NBQ1gEelWyxlJ+fz+8jCN3Z2aG8vDxW3NDQwO909BpcI8gbCBobG6P5+XkyNjam3NxcNkgJERoA4+joKIfYz8+PK02s4WDclzRhwz4meQGvSe4d8BSqTekREMKEZoqHIARi3d7eng0EP3iEYAFhmDAAwDf4MGJdQPz/nSP6A28BawIB6mesAAAAAElFTkSuQmCCIwKHQuzh0Lhq/xYmcoI8G0kU9YKCAn7uoWj/LWDPZyNpLDyru40F7Sj/j+KFpLHwQtJYeCFpLPwPSBL9BpfWrpV8G8wKAAAAAElFTkSuQmCC2kxVr6bvRvmAfQ+hyhNqUN/IaliVK1euWJ8+fdwkPRv1ZtrM1M81GuZ8MPxRodS5f/7Ro0ddgH2IVPxWQuYCoDaEKg+oQSsrK93k+vLlyy5MN2/etF27dtm8efPczzC+8aNF1EsdOnTIzaM0T5owYYJ7hl7uU4+0Y8cO27t3r3uxTys/9WKnT592QfXbFefPn7dNmza55/nnZvP9qTzqXdhwNS2nUy39S0pKbObMmW4+pO0AHwptE2jZrzcX1LNofiQKooY1rew0R1q1apXbctDztAO/du1a69q1q9ss1YpRb5P6rQit+nr37m3bt2+39u3bu3nYjBkzbNy4ce5vfK+3IlQJlBkqDV/Lly9370fp+tGjR7Zs2TIXnJ07d7r31LXXpJ9hNG9SEM6ePWvXrl2zli1b2pIlS1ygovzQJjqeOXPGDZHDhw93Kz1/T8FUiHyQ9D2VbAhVAoUN+pdQqWho0t6Reiqt9qI9koqGOW2G6kU+1df9bt26uYCpvupk9jA+WJE/585VT8doePy1/yxbsAhVAoUN+P9WzhGFUHMnhXTAgAHpT+NBqBIonIjnPFTaBF26dKl7fUabnHEiVMmU81DlEqFKoPoY/nKJfSrEjlAhdoQKsSNUiB2hQuwIFWJHqBA7QoXYESrEjlAhdoQKMTP7H5WeKOQKBbldAAAAAElFTkSuQmCC",
+    "maximumTheses" : "3",
+    "bio" : "this is new update bio"
+}
+
+###
+GET http://localhost:5000/admin/get/lecturer/21029
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2ODIwNjI1NjgsImV4cCI6MTY4MjA2MzQ2OH0.hh-TZOf5GiH_Iq5U8xbnDtDkxigGCQRHUG2dN8MrSlE
+
+###
+DELETE http://localhost:5000/admin/delete/lecturer/21029
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2ODEzMTE0MTcsImV4cCI6MTY4MTMxMjMxN30.tzK8yfh-5dWmgtjrlrZhRXVmaAiTO-jcL4qJGZcNEqA
+
+###
+DELETE http://localhost:5000/admin/delete/student/18593
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2ODIyMjQyNjAsImV4cCI6MTY4MjIyNTE2MH0.sZoyWCUiPndt4FixFSWqHLcpCoZHLO9j2ArnocH_iSY
+
+###
+DELETE http://localhost:5000/admin/delete/thesis/210291
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2ODIyMjQyNjAsImV4cCI6MTY4MjIyNTE2MH0.sZoyWCUiPndt4FixFSWqHLcpCoZHLO9j2ArnocH_iSY
+
+###
+GET http://localhost:5000/admin/get/testForm/12486
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2ODIyMjQyNjAsImV4cCI6MTY4MjIyNTE2MH0.sZoyWCUiPndt4FixFSWqHLcpCoZHLO9j2ArnocH_iSY
+
+###
+DELETE http://localhost:4000/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwidXNlcm5hbWUiOiJqYW1lczEwMyIsInJvbGUiOiJbXCJhZG1pblwiLFwibGVjdHVyZXIyXCJdIiwiaWF0IjoxNjY2NTk2MTU5LCJleHAiOjE2NjY1OTYxODl9.hP6UbWaj7PPOMh9HIB4KlCUzCK1xR6qt-GhFp9CY_Ok

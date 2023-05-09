@@ -1,0 +1,88 @@
+###
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username" : "lukas",
+    "password" : "30000"
+}
+
+###
+POST http://localhost:5000/admin/get/theses
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDAwLCJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6IltcImFkbWluXCJdIiwiaWF0IjoxNjgyMTU1NzU5LCJleHAiOjE2ODIxNTY2NTl9.6max4xehNnF8fFNd10Vui2tI36TtkPx_2t8Uxi1WVsI
+Content-Type: application/json
+
+{
+    "id" : "",
+    "thesisTopic" : "",
+    "thesisField" : "",
+    "availableDay" : "",
+    "defenseDay" : "",
+    "lecturer1_id" : "",
+    "lecturer2_id" : "",
+    "lecturer1_title" : "",
+    "lecturer2_title" : "",
+    "slot" : "",
+    "slotMaximum" : "",
+    "page" : "1"
+}
+
+###
+GET http://localhost:5000/admin/get/thesis/123122
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2NzYwOTk5MDAsImV4cCI6MTY3NjEwMDgwMH0.B_asB2neqdZVPndnPby8qiD4R3Gjm5lC5NEjRsOFIv8
+
+
+###
+POST http://localhost:5000/admin/add/thesis
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2Nzg4NjkxOTUsImV4cCI6MTY3ODg3MDA5NX0.8IO-Mg_s36JZeF2U799NdamcaWAx76S6ussO_9_xPLc
+Content-Type: application/json
+
+{
+    "thesisTopic" : "Data For Everything 1",
+    "thesisField" : "Data Testing",
+    "lecturer1_id" : "21029",
+    "slotMaximum" : 2
+}
+
+
+###
+PUT http://localhost:5000/admin/update/thesis/210292
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2ODExMTQ0NzUsImV4cCI6MTY4MTExNTM3NX0.E0S1OdV3-ja0duEbMN0FlnEIuJYrWrF2dV21EUm5f3Y
+Content-Type: application/json
+
+{
+    "thesisTopic" : "Data For Everything Update",
+    "thesisField" : "Data Updated",
+    "activateRegistration" : true,
+    "activateDefense" : true,
+    "numberOfHardCopies" : "2",
+    "printRequirements" : "This is new requirements",
+    "templateFiles" : "word",
+    "submissionDeadline" : "2022-12-12"
+}
+
+###
+DELETE http://localhost:5000/admin/delete/thesis/123122
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2Nzc1ODc0NjgsImV4cCI6MTY3NzU4ODM2OH0.99KlXOAi_tv1WUVX1dZcQYNR0O1RxFfk5cHbjyksS8E
+
+###
+POST http://localhost:5000/admin/assign/lecturerToThesis
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2NzI2NDc4OTYsImV4cCI6MTY3MjY0ODc5Nn0.Zp26hpmERwHuN8tM5JSyVBhh5IOPYoi2MRLL9IZeuNE
+Content-Type: application/json
+
+{
+    "lecturerId" : 23483,
+    "thesisId" : 123122,
+    "lecturer2" : 22323
+}
+
+
+###
+POST http://localhost:5000/admin/assign/studentToThesis
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2NzI2NDgzNDcsImV4cCI6MTY3MjY0OTI0N30.6R3ACUZPxtSixeEwhN0vMSZ8GbIzgZFbIGUPlX96N2o
+Content-Type: application/json
+
+{
+    "studentId" : 12365,
+    "thesisId" : 329852
+}

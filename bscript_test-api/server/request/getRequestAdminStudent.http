@@ -1,0 +1,164 @@
+
+###
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username" : "lukas",
+    "password" : "30000"
+}
+
+###
+POST http://localhost:5000/admin/get/students
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2ODE2NjU0MTYsImV4cCI6MTY4MTY2NjMxNn0.PfP-QcO1APU1ZkoxM71jjEiIZHDPRTiVPaSqtnVdGjs
+Content-Type: application/json
+
+{
+    "id" : "",
+    "username" : "",
+    "fullname" : "",
+    "intake" : "",
+    "email" : "",
+    "ects" : "",
+    "signature" : "",
+    "page" : "3"
+}
+###
+GET http://localhost:5000/admin/get/student/13961
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2Njk4NzU4ODEsImV4cCI6MTY2OTg3Njc4MX0.uk0B87DRRgxv6yP4PEJ6sR2Pii7Jd9EveeoBMhJyA5I
+
+###
+GET http://localhost:5000/admin/get/student/13961/registrationBachelorThesis
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2Njk3OTU4MzksImV4cCI6MTY2OTc5NjczOX0.fh3u2QXSZ_Y1F0DtykTDIq9jVbfNM1-w6bfiKq-Dvlo
+
+###
+GET http://localhost:5000/admin/get/student/13961/assessmentBachelorThesis
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2Njk3OTU4MzksImV4cCI6MTY2OTc5NjczOX0.fh3u2QXSZ_Y1F0DtykTDIq9jVbfNM1-w6bfiKq-Dvlo
+
+###
+GET http://localhost:5000/admin/get/student/13961/registrationOralDefense
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2Njk3OTU4MzksImV4cCI6MTY2OTc5NjczOX0.fh3u2QXSZ_Y1F0DtykTDIq9jVbfNM1-w6bfiKq-Dvlo
+
+###
+GET http://localhost:5000/admin/get/student/13961/assessmentOralDefense
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2Njk3OTU4MzksImV4cCI6MTY2OTc5NjczOX0.fh3u2QXSZ_Y1F0DtykTDIq9jVbfNM1-w6bfiKq-Dvlo
+
+
+### 
+POST http://localhost:5000/admin/add/student
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2ODEzMTI2ODMsImV4cCI6MTY4MTMxMzU4M30.9pEXcnp5cujA9Fep17FXL3MYMAA3R-SOkW1dgBVeTY0
+Content-Type: application/json
+
+{
+    "id" : 19999,
+    "username" : "paskasz",
+    "fullname" : "haotran",
+    "email" : "haotran@gmail.com",
+    "intake" : "123",
+    "ects" : "168",
+    "signature" : "signature"
+}
+
+###
+PUT http://localhost:5000/admin/update/student/19363
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2Nzc1OTA2MDQsImV4cCI6MTY3NzU5MTUwNH0.bLZn5t8zMvfySCZ89lOpZ4gjDf7WifJdXzcnvbVKmxs
+Content-Type: application/json
+
+{
+    "username" : "linh12",
+    "fullname" : "linhkhanhtran_updated",
+    "intake" : "2018",
+    "email" : "linh1@gmail.com",
+    "ects" : 168,
+    "signature" : "signature"
+}
+
+###
+
+PUT http://localhost:5000/admin/update/student/12486/registrationBachelorThesis
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2NzM1MTA0NDksImV4cCI6MTY3MzUxMTM0OX0.0nz8RJLR0FeUMh0nMzzFOneI_2ifv7mZhEiGdhiMfMs
+Content-Type: application/json
+
+{
+    "surName" : "phannguyen",
+    "foreName" : "long",
+    "dateOfBirth" : "2000-12-23",
+    "placeOfBirth" : "HCM city",
+    "student_date": "2023-01-01",
+    "titleBachelorThesis" : "Data Mining",
+    "thesisType" : "1",
+    "furtherParticipants" : "",
+    "supervisor1_title" : "Prof. Huynh Trung Hieu",
+    "supervisor1_date" : "2022-12-12",
+    "supervisor2_title" : "Master Huynh Nguyen",
+    "supervisor2_date" : "2022-12-12",
+    "issued" : "2023-1-12",
+    "deadlineCopy" : 2,
+    "extensionGranted" : "2022-12-29",
+    "chairmanOfExamination" : "VGU",
+    "dateOfIssue" : "2022-12-23"
+}
+
+###
+PUT http://localhost:5000/admin/update/student/13961/registrationOralDefense
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2Njk5NzQwNjYsImV4cCI6MTY2OTk3NDk2Nn0.aFnalPhjebsBeX0XiezKFRx3GvTOiGt7Ad_5t6e24vI
+Content-Type: application/json
+
+{
+    "surName" : "phannguyen",
+    "foreName" : "long",
+    "supervisor1_title" : "Prof Huynh Trung Hieu",
+    "supervisor2_title" : "Master Huynh Nguyen", 
+    "spectatorsPresent" : 1,
+    "weekDate" : "3", 
+    "proposedDate" : "2022-12-29", 
+    "proposedTime" : "07:00:00", 
+    "room" : "A2392.3", 
+    "concernedAgreed" : 1, 
+    "dateReceive" : "2023-03-29", 
+    "dateSubmission" : "2023-03-29"
+}
+###
+###
+PUT http://localhost:5000/admin/update/13961/assessmentOralDefense
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjIzMjMsInVzZXJuYW1lIjoibWlrYWRhbmciLCJyb2xlIjoiW1wibGVjdHVyZXIyXCJdIiwiaWF0IjoxNjgwMTY1NDQ2LCJleHAiOjE2ODAxNjYzNDZ9.ihdjsZWHZHGd9pxkSiY5SLXnvOBQ8wLCaIko57x_7pc
+Content-Type: application/json
+
+{
+    "studentId" : 18593,
+    "matriculationNumber" : 1238432,
+    "surName" : "phannguyen",
+    "foreName" : "long",
+    "dateDefense" : "2023-03-19",
+    "placeDefense" : "HCM city",
+    "startDate" : "2022-12-29",
+    "finishDate" : "2023-03-19",
+    "stateOfHealth" : 1,
+    "supervisor1_title" : "Prof Huynh Trung Hieu 2",
+    "supervisor1_grade" : 1.2,
+    "supervisor2_title" : "Master Huynh Nguyen 2", 
+    "supervisor2_grade" : 1.2,
+    "record" : "This is record 2",
+    "assessmentDate" : "2023-03-19"
+}
+
+PUT http://localhost:5000/admin/update/student/13961/assessmentBachelorThesis
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2Njk5NzQ2NTQsImV4cCI6MTY2OTk3NTU1NH0.FMmsb_IOe1cWPDLID98pa45aeH7w2tXLnULcj1P1rqs
+Content-Type: application/json
+
+{
+    "surName" : "phannguyen",
+    "foreName" : "long",
+    "thesisType" : "1",
+    "furtherParticipants" : "",
+    "supervisor1_title" : "Prof. Huynh Trung Hieu",
+    "supervisor1_grade" : 1.5,
+    "supervisor2_title" : "Master Huynh Nguyen",
+    "supervisor2_grade" : 1.2,
+    "assessmentThesis" : "This is assessment Thesis",
+    "assessmentDate" : "2022-12-29",
+}
+###
+DELETE http://localhost:5000/admin/delete/student/12345
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2Njg0MjU3MTIsImV4cCI6MTY2ODQyNjYxMn0.PFIxoIdOv9d7IgszUa8hcAuj6zbjXcWrBvQbHYIgz8I
