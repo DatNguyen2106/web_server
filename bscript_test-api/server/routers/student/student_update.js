@@ -122,7 +122,6 @@ student_update_router.put('/registrationOralDefense', verifyTokenStudent, async 
                 const getRegistrationBachelorThesisResults = await executeQuery(res, getRegistrationBachelorThesisQuery, getRegistrationBachelorThesisParams);
                 const infoRegistrationBachelor = getRegistrationBachelorThesisResults[0];
                 console.log("info1");
-                console.log(infoRegistrationBachelor[0].thesis_id);
                 const query = "UPDATE registrations_for_oral_defense SET matriculation_number = ?, surname = ?, forename = ?, supervisor1_title = ?, supervisor2_title = ?, spectators_present = ?, weekdate = ?, proposed_date = ?, proposed_time = ?, room = ?, concerned_agreed = ?, date_receive = ?, date_submission = ?, step = ? where student_id = ?";
                 const queryParams = [matriculationNumber, surName, foreName, supervisor1_title, supervisor2_title, spectatorsPresent, weekDate, proposedDate, proposedTime, room, concernedAgreed, dateReceive, dateSubmission, 1, studentId]
                 const dbResults = await executeQuery(res, query, queryParams);
