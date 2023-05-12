@@ -302,6 +302,16 @@ lecturer1_update_router.put('/account', verifyTokenLecturer1, async (req, res) =
                 const updateAccountQuery = "UPDATE lecturers SET title = ?, email = ?, maximum_of_theses = ?, bio = ?, signature = ? where lecturer_id = ?";
                 const updateAccountParams = [title, email, maximum_of_theses, bio, signature, lecturerId];
                 const updateAccountResults = await executeQuery(res, updateAccountQuery, updateAccountParams);
+                const sendNotificationQuery = "INSERT INTO notifications (title, sender, receiver, content) VALUES (?, ?, ?, ?)";
+                const sendParams = [`Student update account` , req.userId, req.userId, `"You have updated your account successfully"`];
+                const notification = await sendNotification(res, sendNotificationQuery, sendParams);
+                const notificationReceived1 = await getNotificationReceived(res, req.userId);
+                
+                const socket1 = await getSocketById(res, req.userId);
+                const socketReceiver1Id = socket1[0].socket_id;
+                if(socket1 === null || socket1 === undefined){
+                    }
+                else { io.to(socketReceiver1Id).emit("notificationReceived", (notificationReceived1))};
                 res.send(updateAccountResults);
             }
             else res.status(405).send("You are not allowed to access, You are not lecturer1.1")

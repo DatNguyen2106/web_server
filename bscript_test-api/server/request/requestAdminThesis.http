@@ -13,7 +13,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDAwLCJ1c
 Content-Type: application/json
 
 {
-    "id" : "",
+    "thesisId" : "",
     "thesisTopic" : "",
     "thesisField" : "",
     "availableDay" : "",

@@ -291,6 +291,16 @@ student_update_router.put('/account', verifyTokenStudent, async (req, res) =>{
                 const updateAccountQuery = "UPDATE students SET signature = ? WHERE student_id  = ?";
                 const updateAccountParams = [signature, studentId];
                 const updateAccountResults = await executeQuery(res, updateAccountQuery, updateAccountParams);
+                const sendNotificationQuery = "INSERT INTO notifications (title, sender, receiver, content) VALUES (?, ?, ?, ?)";
+                const sendParams = [`Student update account` , req.userId, req.userId, `"You have updated your account successfully"`];
+                const notification = await sendNotification(res, sendNotificationQuery, sendParams);
+                const notificationReceived1 = await getNotificationReceived(res, req.userId);
+                
+                const socket1 = await getSocketById(res, req.userId);
+                const socketReceiver1Id = socket1[0].socket_id;
+                if(socket1 === null || socket1 === undefined){
+                    }
+                else { io.to(socketReceiver1Id).emit("notificationReceived", (notificationReceived1))};
                 res.send(updateAccountResults);
             }
             else res.status(405).send("You are not allowed to access, You are not student")

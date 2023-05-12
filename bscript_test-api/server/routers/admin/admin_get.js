@@ -350,7 +350,7 @@ admin_get_router.post('/theses', verifyTokenAdmin, async (req, res) =>{
     try {
         var chunkForPage = 5;
         var page = (req.body.page === "" || req.body.page === undefined) ?  1 : req.body.page;
-        var thesisId  = (req.body.id === "" || req.body.id === undefined) ?  '%' : ('%' + req.body.id +'%');
+        var thesisId  = (req.body.thesisId === "" || req.body.thesisId === undefined) ?  '%' : ('%' + req.body.thesisId +'%');
         var slot = (req.body.slot === "" || req.body.slot === undefined) ?  '%' : ('%' + req.body.slot  + '%');
         var slotMaximum = (req.body.slotMaximum === "" || req.body.slotMaximum === undefined) ?  '%' : ('%' + req.body.slotMaximum  + '%');
         var thesisTopic = (req.body.thesisTopic === "" || req.body.thesisTopic === undefined) ?  '%' : ('%' + req.body.thesisTopic  + '%');
