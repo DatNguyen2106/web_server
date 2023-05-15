@@ -64,28 +64,6 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:5000/admin/get/test
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2ODE5MjE4NTAsImV4cCI6MTY4MTkyMjc1MH0.p4hKpQ1LOKe7bMm6E-5p8tC4Bvzvq2IGFyVz9AQBayw
-
-###
-GET http://localhost:5000/admin/get1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJqYW1lczIiLCJyb2xlIjoibGVjdHVyZXIxIiwiaWF0IjoxNjY2NDE2NzkxLCJleHAiOjE2NjY0MTY4MjF9.TxOqq6TGCqAkuNVt3ARtDaiARcHPKfib1sumYLa8zq4
-
-###
-GET http://localhost:5000/admin/get2
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2ODE5MjE4NTAsImV4cCI6MTY4MTkyMjc1MH0.p4hKpQ1LOKe7bMm6E-5p8tC4Bvzvq2IGFyVz9AQBayw
-
-
-###
-GET http://localhost:5000/lecturer1/get
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwidXNlcm5hbWUiOiJqYW1lczEwMSIsInJvbGUiOiJbXCJhZG1pblwiLFwibGVjdHVyZXIxXCJdIiwiaWF0IjoxNjY2NTk2MTk5LCJleHAiOjE2NjY1OTYyMjl9.U_ZoOcD-xWn9R2yhbM8WRU7BwZJF-GfU-GH8WYLOJdw
-
-###
-GET http://localhost:5000/lecturer2/get
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIiLCJ1c2VybmFtZSI6ImphbWVzMiIsInJvbGUiOiJbXCJsZWN0dXJlcjFcIl0iLCJpYXQiOjE2NjY2MjY1MjMsImV4cCI6MTY2NjYyNjU1M30.bYNN6iVuF1iK3v7HNIyH9q03sCDJWYJ5gtJ9Xl-D9gs
-
-
-###
 GET http://localhost:5000/admin/get/student/19363
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2ODE5MjE1OTEsImV4cCI6MTY4MTkyMjQ5MX0.rx45jkqaKXllaHvMldLrGzSNguy7sw8bIjtjQbpiuZ
 
