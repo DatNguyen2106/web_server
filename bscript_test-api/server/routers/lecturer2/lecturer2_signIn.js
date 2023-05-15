@@ -4,7 +4,6 @@ const db = require('../../db/connectDB');
 const verifyTokenLecturer2 = require('../../middleware/verifyTokenLecturer2');
 const io = require('../.././socketServer');
 lecturer2_signIn_router.post('/registrationBachelorThesis', verifyTokenLecturer2, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var role = req.role;
         var studentId = (req.body.studentId === undefined || req.body.studentId === null || req.body.studentId === "") ? null : req.body.studentId;

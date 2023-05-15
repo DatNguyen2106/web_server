@@ -8,7 +8,6 @@ const moment = require('moment');
 
 
 student_get_router.post('/lecturers', verifyTokenStudent, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var chunkForPage = 5;
         var lecturerId = (req.body.lecturerId === null || req.body.lecturerId === undefined || req.body.lecturerId === "") ? '%' : ('%' + req.body.lecturerId + '%');
@@ -67,7 +66,6 @@ student_get_router.post('/lecturers', verifyTokenStudent, async (req, res) => {
 
 })
 student_get_router.get('/lecturer/:id', verifyTokenStudent, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var lecturerId;
         var role = req.role;
@@ -105,7 +103,6 @@ student_get_router.get('/lecturer/:id', verifyTokenStudent, async (req, res) => 
 
 })
 student_get_router.get('/theses', verifyTokenStudent, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var studentId;
         var role = req.role;
@@ -150,7 +147,6 @@ student_get_router.get('/theses', verifyTokenStudent, async (req, res) => {
 })
 
 student_get_router.get('/thesis', verifyTokenStudent, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var studentId;
         var role = req.role;
@@ -208,7 +204,6 @@ student_get_router.get('/thesis', verifyTokenStudent, async (req, res) => {
 
 })
 student_get_router.get('/testForm', verifyTokenStudent, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var role = req.role;
         if (req.username && req.userId) {
@@ -256,7 +251,7 @@ student_get_router.get('/testForm', verifyTokenStudent, async (req, res) => {
                     res.send({ "student_id": studentId, "list": results[0], registrationBachelorThesisResults, registrationOralDefenseResults, assessmentBachelorThesisResults, assessmentOralDefenseResults });
                 }
             }
-            else res.status(405).send("You are not allowed to access, You are not admin")
+            else res.status(405).send("You are not allowed to access, You are not student")
         }
         else res.status(404).send("No user with that username");
     } catch (error) {
@@ -266,7 +261,6 @@ student_get_router.get('/testForm', verifyTokenStudent, async (req, res) => {
 
 })
 student_get_router.get('/account', verifyTokenStudent, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var studentId;
         var role = req.role;

@@ -4,7 +4,6 @@ const db = require('../../db/connectDB');
 const verifyTokenLecturer1 = require('../../middleware/verifyTokenLecturer1');
 const moment = require('moment');
 lecturer1_modify_router.put('/thesis', verifyTokenLecturer1, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var role = req.role;
         var thesisField = (req.body.thesisField === "" || req.body.thesisField === undefined || req.body.thesisField === null) ? null : req.body.thesisField;
@@ -19,7 +18,7 @@ lecturer1_modify_router.put('/thesis', verifyTokenLecturer1, async (req, res) =>
                 const modifyThesisResults = await executeQuery(res, modifyThesisQuery, modifyThesisParams);
                 res.send(modifyThesisResults);
             }
-            else res.status(405).send("You are not allowed to access, You are not lecturer1.1")
+            else res.status(405).send("You are not allowed to access, You are not lecturer1")
         }
         else res.status(404).send("No user with that username");
     } catch (error) {

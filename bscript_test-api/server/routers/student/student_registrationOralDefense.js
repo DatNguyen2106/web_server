@@ -46,7 +46,7 @@ student_registrationOralDefense_router.post('/', verifyTokenStudent, async (req,
                     }
                 }
             }
-            else res.status(405).send("You are not allowed to access, You are not admin")
+            else res.status(405).send("You are not allowed to access, You are not student")
         }
         else res.status(404).send("No user with that username");
 

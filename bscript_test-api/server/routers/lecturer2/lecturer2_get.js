@@ -6,7 +6,6 @@ const verifyTokenLecturer = require('../../middleware/verifyTokenLecturer');
 const verifyTokenLecturer2 = require('../../middleware/verifyTokenLecturer2');
 const moment = require('moment');
 lecturer2_get_router.post('/theses', getThesesLecturer2, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var role = req.role;
         var chunkForPage = 5;
@@ -48,7 +47,6 @@ lecturer2_get_router.post('/theses', getThesesLecturer2, async (req, res) => {
 
 })
 lecturer2_get_router.get('/thesis/:id', verifyTokenLecturer2, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var role = req.role;
         var thesisId;
@@ -101,7 +99,6 @@ lecturer2_get_router.get('/thesis/:id', verifyTokenLecturer2, async (req, res) =
 
 })
 lecturer2_get_router.get('/testForm/:id', verifyTokenLecturer2, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var studentId = req.params.id;
         var role = req.role;
@@ -148,7 +145,7 @@ lecturer2_get_router.get('/testForm/:id', verifyTokenLecturer2, async (req, res)
                     res.send({ "student_id": studentId, "list": results[0], registrationBachelorThesisResults, registrationOralDefenseResults, assessmentBachelorThesisResults, assessmentOralDefenseResults });
                 }
             }
-            else res.status(405).send("You are not allowed to access, You are not admin")
+            else res.status(405).send("You are not allowed to access, You are not lecturer2")
         }
         else res.status(404).send("No user with that username");
     } catch (error) {
@@ -158,7 +155,6 @@ lecturer2_get_router.get('/testForm/:id', verifyTokenLecturer2, async (req, res)
 
 })
 lecturer2_get_router.get('/account', verifyTokenLecturer2, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var role = req.role;
         if (req.username) {
@@ -175,7 +171,7 @@ lecturer2_get_router.get('/account', verifyTokenLecturer2, async (req, res) => {
                     }
                 }
             }
-            else res.status(405).send("You are not allowed to access, You are not lecturer1")
+            else res.status(405).send("You are not allowed to access, You are not lecturer2")
         }
         else res.status(404).send("No user with that username");
     } catch (error) {

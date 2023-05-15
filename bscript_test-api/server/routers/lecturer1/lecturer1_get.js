@@ -6,7 +6,6 @@ const getThesesLecturer1 = require('../../middleware/getThesesLecturer1');
 const verifyTokenLecturer1 = require('../../middleware/verifyTokenLecturer1');
 const moment = require('moment');
 lecturer1_get_router.post('/theses', getThesesLecturer1, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var role = req.role;
         var chunkForPage = 5;
@@ -71,7 +70,6 @@ lecturer1_get_router.post('/theses', getThesesLecturer1, async (req, res) => {
 
 })
 lecturer1_get_router.get('/thesis/:id', verifyTokenLecturer1, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var role = req.role;
         var thesisId;
@@ -123,7 +121,6 @@ lecturer1_get_router.get('/thesis/:id', verifyTokenLecturer1, async (req, res) =
 
 })
 lecturer1_get_router.get('/testForm/:id', verifyTokenLecturer1, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var studentId = req.params.id;
         var role = req.role;
@@ -170,7 +167,7 @@ lecturer1_get_router.get('/testForm/:id', verifyTokenLecturer1, async (req, res)
                     res.send({ "student_id": studentId, "list": results[0], registrationBachelorThesisResults, registrationOralDefenseResults, assessmentBachelorThesisResults, assessmentOralDefenseResults });
                 }
             }
-            else res.status(405).send("You are not allowed to access, You are not admin")
+            else res.status(405).send("You are not allowed to access, You are not lecturer1")
         }
         else res.status(404).send("No user with that username");
     } catch (error) {
@@ -180,7 +177,6 @@ lecturer1_get_router.get('/testForm/:id', verifyTokenLecturer1, async (req, res)
 
 })
 lecturer1_get_router.get('/account', verifyTokenLecturer1, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var role = req.role;
         var thesisId;

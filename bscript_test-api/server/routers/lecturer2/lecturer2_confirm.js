@@ -5,7 +5,6 @@ const verifyTokenLecturer2 = require('../../middleware/verifyTokenLecturer2');
 const io = require('../.././socketServer');
 
 lecturer2_confirm_router.post('/confirmThesis', verifyTokenLecturer2, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var role = req.role;
         var thesisId = (req.body.thesisId === undefined || req.body.thesisId === "" || req.body.thesisId === null) ? null : req.body.thesisId;
@@ -129,7 +128,7 @@ lecturer2_confirm_router.post('/confirmThesis', verifyTokenLecturer2, async (req
                     res.send(setNullLecturer2Results);
                 }
             }
-            else res.status(405).send("You are not allowed to access, You are not lecturer1")
+            else res.status(405).send("You are not allowed to access, You are not lecturer2")
         }
         else res.status(404).send("No user with that username");
     } catch (error) {

@@ -6,7 +6,6 @@ const moment = require('moment');
 const io = require('../.././socketServer');
 
 lecturer2_update_router.put('/assessmentBachelor', verifyTokenLecturer2, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var role = req.role;
         var studentId;
@@ -80,7 +79,7 @@ lecturer2_update_router.put('/assessmentBachelor', verifyTokenLecturer2, async (
 
                 res.send({ "result": "done" });
             }
-            else res.status(405).send("You are not allowed to access, You are not lecturer1.1")
+            else res.status(405).send("You are not allowed to access, You are not lecturer2")
         }
         else res.status(404).send("No user with that username");
     } catch (error) {
@@ -90,7 +89,6 @@ lecturer2_update_router.put('/assessmentBachelor', verifyTokenLecturer2, async (
 
 })
 lecturer2_update_router.put('/assessmentOralDefense', verifyTokenLecturer2, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var role = req.role;
         var studentId;
@@ -164,7 +162,7 @@ lecturer2_update_router.put('/assessmentOralDefense', verifyTokenLecturer2, asyn
                 }
                 res.send({ "result": "done" });
             }
-            else res.status(405).send("You are not allowed to access, You are not lecturer1.1")
+            else res.status(405).send("You are not allowed to access, You are not lecturer2")
         }
         else res.status(404).send("No user with that username");
     } catch (error) {
@@ -174,7 +172,6 @@ lecturer2_update_router.put('/assessmentOralDefense', verifyTokenLecturer2, asyn
 
 })
 lecturer2_update_router.put('/account', verifyTokenLecturer2, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var role = req.role;
         var title = (req.body.title === "" || req.body.title === undefined) ? null : req.body.title;
@@ -201,7 +198,7 @@ lecturer2_update_router.put('/account', verifyTokenLecturer2, async (req, res) =
                 else { io.to(socketReceiver1Id).emit("notificationReceived", (notificationReceived1))};
                 res.send(updateAccountResults);
             }
-            else res.status(405).send("You are not allowed to access, You are not lecturer1.1")
+            else res.status(405).send("You are not allowed to access, You are not lecturer2")
         }
         else res.status(404).send("No user with that username");
     } catch (error) {
@@ -211,7 +208,6 @@ lecturer2_update_router.put('/account', verifyTokenLecturer2, async (req, res) =
 
 })
 lecturer2_update_router.put('/signature', verifyTokenLecturer2, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     var role = req.role;
     var signature = req.body.signature;
     if (req.username) {
@@ -226,7 +222,7 @@ lecturer2_update_router.put('/signature', verifyTokenLecturer2, async (req, res)
                 res.send(results);
             }
         }
-        else res.status(405).send("You are not allowed to access, You are not admin")
+        else res.status(405).send("You are not allowed to access, You are not lecturer2")
     }
     else res.status(404).send("No user with that username");
 });

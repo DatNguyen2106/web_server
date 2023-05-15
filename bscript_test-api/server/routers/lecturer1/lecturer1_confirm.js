@@ -6,7 +6,6 @@ const io = require('../.././socketServer');
 
 
 lecturer1_confirm_router.post('/confirmStudent', verifyTokenLecturer1, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var role = req.role;
         var studentId = (req.body.studentId === undefined || req.body.studentId === "" || req.body.studentId === null) ? null : req.body.studentId;
@@ -85,7 +84,6 @@ lecturer1_confirm_router.post('/confirmStudent', verifyTokenLecturer1, async (re
 
 })
 lecturer1_confirm_router.post('/confirmThesis', verifyTokenLecturer1, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var role = req.role;
         var thesisId = (req.body.thesisId === undefined || req.body.thesisId === "" || req.body.thesisId === null) ? null : req.body.thesisId;

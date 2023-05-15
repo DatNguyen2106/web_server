@@ -7,7 +7,6 @@ const verifyTokenLecturer1 = require('../../middleware/verifyTokenLecturer1');
 const io = require('../.././socketServer');
 
 lecturer1_signIn_router.post('/registrationBachelorThesisAsSup1', verifyTokenLecturer1, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var role = req.role;
         var studentId = (req.body.studentId === undefined || req.body.studentId === null || req.body.studentId === "") ? null : req.body.studentId;
@@ -108,7 +107,6 @@ lecturer1_signIn_router.post('/registrationBachelorThesisAsSup1', verifyTokenLec
 })
 
 lecturer1_signIn_router.post('/registrationBachelorThesisAsSup2', verifyTokenLecturer1, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var role = req.role;
         var studentId = (req.body.studentId === undefined || req.body.studentId === null || req.body.studentId === "") ? null : req.body.studentId;

@@ -5,10 +5,8 @@ const db = require('../../db/connectDB');
 const io = require('../.././socketServer');
 const bcrypt = require('bcrypt');
 const moment = require('moment');
-// api for add lecturer by id
 const saltRounds = 10;
 admin_add_router.post('/lecturer', verifyTokenAdmin, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     var role = req.role;
     var emailFormat = /^([a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?)$/;
     var lecturerId;
@@ -84,7 +82,6 @@ admin_add_router.post('/lecturer', verifyTokenAdmin, async (req, res) => {
     else res.status(404).send("No user with that username");
 })
 admin_add_router.post('/student', verifyTokenAdmin, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     var role = req.role;
     var emailFormat = /^([a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?)$/;
     var id;
@@ -155,7 +152,6 @@ admin_add_router.post('/student', verifyTokenAdmin, async (req, res) => {
     else res.status(404).send("No user with that username");
 })
 admin_add_router.post('/thesis', verifyTokenAdmin, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     var role = req.role;
     var thesisTopic = (req.body.thePisTopic === "" || req.body.thesisTopic === undefined) ? null : req.body.thesisTopic;
     var thesisField = (req.body.thesisField === "" || req.body.thesisField === undefined) ? null : req.body.thesisField;
@@ -186,27 +182,7 @@ admin_add_router.post('/thesis', verifyTokenAdmin, async (req, res) => {
     }
     else res.status(404).send("No user with that username");
 });
-// admin_add_router.post('/signature', verifyTokenAdmin, async (req, res) =>{
-//         // because of unique id value, so this api just returns 1 or no value.
-//             var role = req.role;
-//             var id;
-//             var signature = req.params.signature;
-//             if(req.username) {
-//                 if(role){
-//                     if(req.userId === undefined  || req.userId === ''){
-//                         res.status(500).send("Undefined id for add");
-//                     } 
-//                     else {
-//                         const insertSignatureQuery = "INSERT INTO admins(admin_id, signature) VALUES(?,?)";
-//                         const insertSignatureQueryParams = [req.userId, signature];
-//                         const results = await executeQuery(res, insertSignatureQuery, insertSignatureQueryParams);
-//                         res.send(results);
-//                     }
-//                 }
-//                 else res.status(405).send("You are not allowed to access, You are not admin")
-//             }
-//             else res.status(404).send("No user with that username");
-// });
+
 
 // use for email
 function checkTypeToAdd(value, type) {
@@ -270,5 +246,4 @@ const getNotificationReceived = (res, id) => {
     return results;
 }
 
-// Exports cho biến admin_router
 module.exports = admin_add_router;

@@ -5,7 +5,6 @@ const verifyToken = require('../../middleware/verifyTokenAdmin');
 const db = require('../../db/connectDB');
 const io = require('../.././socketServer');
 admin_update_router.put('/lecturer/:id', verifyTokenAdmin, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     var role = req.role;
     var emailFormat = /^([a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?)$/;
     var paramId;
@@ -61,7 +60,6 @@ admin_update_router.put('/lecturer/:id', verifyTokenAdmin, async (req, res) => {
 
 
 admin_update_router.put('/student/:id', verifyTokenAdmin, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     var role = req.role;
     var emailFormat = /^([a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?)$/;
     var paramId;
@@ -116,7 +114,6 @@ admin_update_router.put('/student/:id', verifyTokenAdmin, async (req, res) => {
 })
 
 admin_update_router.put('/thesis/:thesisId', verifyTokenAdmin, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     var role = req.role;
     const dateFormat = /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/;
     var thesisTopic = (req.body.thesisTopic === "" || req.body.thesisTopic === undefined) ? null : (req.body.thesisTopic);
@@ -510,7 +507,6 @@ admin_update_router.put('/student/:id/assessmentOralDefense', verifyTokenAdmin, 
 
 })
 admin_update_router.post('/signature', verifyTokenAdmin, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     var role = req.role;
     var signature = req.body.signature;
     if (req.username) {
@@ -532,7 +528,6 @@ admin_update_router.post('/signature', verifyTokenAdmin, async (req, res) => {
 
 
 admin_update_router.put('/signature', verifyTokenAdmin, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     var role = req.role;
     var signature = req.body.signature;
     if (req.username) {
@@ -620,5 +615,4 @@ const executeQuery = (res, query, queryParams) => {
     })
     return results;
 }
-// Exports cho biến admin_router
 module.exports = admin_update_router;

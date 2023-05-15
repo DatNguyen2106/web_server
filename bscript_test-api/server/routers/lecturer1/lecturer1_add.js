@@ -4,7 +4,6 @@ const db = require('../../db/connectDB');
 const addThesisLecturer11 = require('../../middleware/addThesisLecturer11');
 const moment = require('moment');
 lecturer1_add_router.post('/thesis', addThesisLecturer11, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var role = req.role;
         var currentTimeValue = moment().valueOf();

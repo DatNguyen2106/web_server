@@ -314,7 +314,6 @@ student_update_router.put('/account', verifyTokenStudent, async (req, res) =>{
         
     })
 student_update_router.put('/signature', verifyTokenStudent, async (req, res) =>{
-        // because of unique id value, so this api just returns 1 or no value.
             var role = req.role;
             var signature = req.body.signature;
             if(req.username) {
@@ -329,7 +328,7 @@ student_update_router.put('/signature', verifyTokenStudent, async (req, res) =>{
                         res.send(results);
                     }
                 }
-                else res.status(405).send("You are not allowed to access, You are not admin")
+                else res.status(405).send("You are not allowed to access, You are not student")
             }
             else res.status(404).send("No user with that username");
 });

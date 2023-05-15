@@ -4,7 +4,6 @@ const db = require('../../db/connectDB');
 const verifyTokenLecturer1 = require('../../middleware/verifyTokenLecturer1');
 const moment = require('moment');
 lecturer1_delete_router.delete('/thesis/:id', verifyTokenLecturer1, async (req, res) => {
-    // because of unique id value, so this api just returns 1 or no value.
     try {
         var role = req.role;
         var thesisId;
@@ -29,7 +28,7 @@ lecturer1_delete_router.delete('/thesis/:id', verifyTokenLecturer1, async (req, 
                     res.send("no thesis found with that id")
                 }
             }
-            else res.status(405).send("You are not allowed to access, You are not lecturer1.1")
+            else res.status(405).send("You are not allowed to access, You are not lecturer1")
         }
         else res.status(404).send("No user with that username");
     } catch (error) {

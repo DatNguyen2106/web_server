@@ -109,7 +109,7 @@ student_add_router.post('/registrationBachelorThesis', verifyTokenStudent, async
                     }
                 }
             }
-            else res.status(405).send("You are not allowed to access, You are not admin")
+            else res.status(405).send("You are not allowed to access, You are not student")
         }
         else res.status(404).send("No user with that username");
 
@@ -160,7 +160,7 @@ student_add_router.post('/registrationOralDefense', verifyTokenStudent, async (r
                     }
                 }
             }
-            else res.status(405).send("You are not allowed to access, You are not admin")
+            else res.status(405).send("You are not allowed to access, You are not student")
         }
         else res.status(404).send("No user with that username");
 
@@ -216,7 +216,7 @@ student_add_router.post('/assessmentOralDefense', verifyTokenStudent, async (req
                     }
                 }
             }
-            else res.status(405).send("You are not allowed to access, You are not admin")
+            else res.status(405).send("You are not allowed to access, You are not student")
         }
         else res.status(404).send("No user with that username");
 
@@ -268,7 +268,7 @@ student_add_router.post('/assessmentBachelorThesis', verifyTokenStudent, async (
                     }
                 }
             }
-            else res.status(405).send("You are not allowed to access, You are not admin")
+            else res.status(405).send("You are not allowed to access, You are not student")
         }
         else res.status(404).send("No user with that username");
 
