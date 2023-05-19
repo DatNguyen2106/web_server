@@ -49,7 +49,7 @@ lecturer2_update_router.put('/assessmentBachelor', verifyTokenLecturer2, async (
                 if (getExactThesisFromStudentResults[0]) {
                     if (getExactThesisFromStudentResults[0].studentId !== null && getExactThesisFromStudentResults[0][0].lecturer1_id !== null) {
                         const sendNotificationAnotherSupQuery = "INSERT INTO notifications (title, sender, receiver, content) VALUES (?, ?, ?, ?)";
-                        const sendNotificationAnotherSupParams = [`Lecturer2 update assessment bachelor`, req.userId, getExactThesisFromStudentResults[0][0].lecturer1_id, `${lecturerTitle} has completed assessment bachelor thesis form for the thesis "${getExactThesisFromStudentResults[0][0].thesis_topic}" for the student "${getExactThesisFromStudentResults[0][0].student_id}"`];
+                        const sendNotificationAnotherSupParams = [`Lecturer2 update assessment bachelor`, req.userId, getExactThesisFromStudentResults[0][0].lecturer1_id, `${lecturerTitle} has completed assessment bachelor thesis form for the thesis "${getExactThesisFromStudentResults[0][0].thesis_topic}" for the student ${getExactThesisFromStudentResults[0][0].student_id}`];
                         const sendNotificationAnotherSup = await sendNotification(res, sendNotificationAnotherSupQuery, sendNotificationAnotherSupParams);
                         const notificationReceived = await getNotificationReceived(res, getExactThesisFromStudentResults[0][0].lecturer1_id);
 
@@ -64,7 +64,7 @@ lecturer2_update_router.put('/assessmentBachelor', verifyTokenLecturer2, async (
                         console.log(getAllAdminResults[0]);
                         for (let j = 0; j < getAllAdminResults[0].length; j++){
                             const sendNotificationForAdminQuery = "INSERT INTO notifications (title, sender, receiver, content) VALUES (?, ?, ?, ?)";
-                            const sendNotificationForAdminParams = [`Lecturer2 update assessment registration bachelor form` , req.userId, getAllAdminResults[0][j].id, `${lecturerTitle} has completed the assessment bachelor thesis from the thesis  "${getExactThesisFromStudentResults[0][0].thesis_topic}" for the student "${getExactThesisFromStudentResults[0][0].student_id}"`];
+                            const sendNotificationForAdminParams = [`Lecturer2 update assessment registration bachelor form` , req.userId, getAllAdminResults[0][j].id, `${lecturerTitle} has completed the assessment bachelor thesis from the thesis  "${getExactThesisFromStudentResults[0][0].thesis_topic}" for the student ${getExactThesisFromStudentResults[0][0].student_id}`];
                             const sendNotificationForAdminResults = await executeQuery(res, sendNotificationForAdminQuery, sendNotificationForAdminParams);
                             let notificationReceivedAdmin = await getNotificationReceived(res, getAllAdminResults[0][j].id);
                             let adminSocket = await getSocketById(res, getAllAdminResults[0][j].id);
@@ -135,7 +135,7 @@ lecturer2_update_router.put('/assessmentOralDefense', verifyTokenLecturer2, asyn
                 if (getExactThesisFromStudentResults[0]) {
                     if (getExactThesisFromStudentResults[0].studentId !== null && getExactThesisFromStudentResults[0][0].lecturer1_id !== null) {
                         const sendNotificationAnotherSupQuery = "INSERT INTO notifications (title, sender, receiver, content) VALUES (?, ?, ?, ?)";
-                        const sendNotificationAnotherSupParams = [`Lecturer2 update assessment oral defense`, req.userId, getExactThesisFromStudentResults[0][0].lecturer1_id, `${lecturerTitle} has completed assessment oral defense form for the thesis "${getExactThesisFromStudentResults[0][0].thesis_topic}" for the student "${getExactThesisFromStudentResults[0][0].student_id}"`];
+                        const sendNotificationAnotherSupParams = [`Lecturer2 update assessment oral defense`, req.userId, getExactThesisFromStudentResults[0][0].lecturer1_id, `${lecturerTitle} has completed assessment oral defense form for the thesis "${getExactThesisFromStudentResults[0][0].thesis_topic}" for the student ${getExactThesisFromStudentResults[0][0].student_id}`];
                         const sendNotificationAnotherSup = await sendNotification(res, sendNotificationAnotherSupQuery, sendNotificationAnotherSupParams);
                         const notificationReceivedAnotherSup = await getNotificationReceived(res, getExactThesisFromStudentResults[0][0].lecturer1_id);
                         const socketSup = await getSocketById(res, getExactThesisFromStudentResults[0][0].lecturer1_id);
@@ -149,7 +149,7 @@ lecturer2_update_router.put('/assessmentOralDefense', verifyTokenLecturer2, asyn
                         console.log(getAllAdminResults[0]);
                         for (let j = 0; j < getAllAdminResults[0].length; j++){
                             const sendNotificationForAdminQuery = "INSERT INTO notifications (title, sender, receiver, content) VALUES (?, ?, ?, ?)";
-                            const sendNotificationForAdminParams = [`Lecturer2 update assessment oral defense form` , req.userId, getAllAdminResults[0][j].id, `${lecturerTitle} has completed the assessment oral defense from the thesis  "${getExactThesisFromStudentResults[0][0].thesis_topic}" for the student "${getExactThesisFromStudentResults[0][0].student_id}"`];
+                            const sendNotificationForAdminParams = [`Lecturer2 update assessment oral defense form` , req.userId, getAllAdminResults[0][j].id, `${lecturerTitle} has completed the assessment oral defense from the thesis  "${getExactThesisFromStudentResults[0][0].thesis_topic}" for the student ${getExactThesisFromStudentResults[0][0].student_id}`];
                             const sendNotificationForAdminResults = await executeQuery(res, sendNotificationForAdminQuery, sendNotificationForAdminParams);
                             let notificationReceivedAdmin = await getNotificationReceived(res, getAllAdminResults[0][j].id);
                             let adminSocket = await getSocketById(res, getAllAdminResults[0][j].id);
