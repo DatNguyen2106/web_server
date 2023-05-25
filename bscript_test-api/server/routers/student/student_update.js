@@ -217,7 +217,7 @@ student_update_router.put('/confirmSup2', verifyTokenStudent, async (req, res) =
 
                 if(thesisResultsAfter){
                     const sendNotificationQuery = "INSERT INTO notifications (title, sender, receiver, content) VALUES (?, ?, ?, ?)";
-                    const sendParams = [`Student add sup2` , req.userId, thesisResultsAfter[0][0].lecturer1_id, `${thesisResultsAfter[0][0].lecturer2_title} was requested to join the thesis "${thesisResultsAfter[0][0].thesis_topic}" as supervisor 2`];
+                    const sendParams = [`Student add sup2` , req.userId, thesisResultsAfter[0][0].lecturer1_id, `${thesisResultsAfter[0][0].lecturer2_title} was invited to join the thesis "${thesisResultsAfter[0][0].thesis_topic}" as supervisor 2`];
                     const notification = await sendNotification(res, sendNotificationQuery, sendParams);
                     const notificationReceived1 = await getNotificationReceived(res, thesisResultsAfter[0][0].lecturer1_id);
                     const socket1 = await getSocketById(res, thesisResultsAfter[0][0].lecturer1_id);
@@ -228,7 +228,7 @@ student_update_router.put('/confirmSup2', verifyTokenStudent, async (req, res) =
                     const notificationReceived2 = await getNotificationReceived(res, lecturer2_id);
                     const sendNotificationSup2Query = "INSERT INTO notifications (title, sender, receiver, content) VALUES (?, ?, ?, ?)";
 
-                    const sendNotificationSup2Params = [`Student add sup2` , req.userId, lecturer2_id, `You were requested to join the thesis "${thesisResultsAfter[0][0].thesis_topic}" as supervisor 2`];
+                    const sendNotificationSup2Params = [`Student add sup2` , req.userId, lecturer2_id, `You were invited to join the thesis "${thesisResultsAfter[0][0].thesis_topic}" as supervisor 2`];
                     const notificationSup2 = await sendNotification(res, sendNotificationSup2Query, sendNotificationSup2Params);
                     const notificationSup2Received = await getNotificationReceived(res, lecturer2_id);
                     const socket2 = await getSocketById(res, lecturer2_id);
@@ -241,7 +241,7 @@ student_update_router.put('/confirmSup2', verifyTokenStudent, async (req, res) =
                         if (thesisResultsAfter[0][i].lecturer2_title !== null){
                             if(req.userId !== thesisResultsAfter[0][i].student_id && thesisResultsAfter[0][i].student_id !== null){                               
                                 const sendNotificationForStudentQuery = "INSERT INTO notifications (title, sender, receiver, content) VALUES (?, ?, ?, ?)";
-                                const sendNotificationForStudentParams = [`Student add sup2` , req.userId, thesisResultsAfter[0][i].student_id, `${thesisResultsAfter[0][i].lecturer2_title} was requested to join your thesis "${thesisResultsAfter[0][i].thesis_topic}" as supervisor 2`];
+                                const sendNotificationForStudentParams = [`Student add sup2` , req.userId, thesisResultsAfter[0][i].student_id, `${thesisResultsAfter[0][i].lecturer2_title} was invited to join your thesis "${thesisResultsAfter[0][i].thesis_topic}" as supervisor 2`];
                                 const sendNotificationForStudentNoti = await sendNotification(res, sendNotificationForStudentQuery, sendNotificationForStudentParams);
                                 const notificationReceived2 = await getNotificationReceived(res, thesisResultsAfter[0][i].student_id);
                                 const socket2 = await getSocketById(res, thesisResultsAfter[0][i].student_id);
@@ -252,7 +252,7 @@ student_update_router.put('/confirmSup2', verifyTokenStudent, async (req, res) =
                             }
                             else if(req.userId === thesisResultsAfter[0][i].student_id && thesisResultsAfter[0][i].student_id !== null){
                                 const sendNotificationQuery = "INSERT INTO notifications (title, sender, receiver, content) VALUES (?, ?, ?, ?)";
-                                const sendParams = [`Student add sup2` , req.userId, thesisResultsAfter[0][i].student_id, `${thesisResultsAfter[0][i].lecturer2_title} was requested to join your thesis "${thesisResultsAfter[0][i].thesis_topic}" as supervisor 2`];
+                                const sendParams = [`Student add sup2` , req.userId, thesisResultsAfter[0][i].student_id, `${thesisResultsAfter[0][i].lecturer2_title} was invited to join your thesis "${thesisResultsAfter[0][i].thesis_topic}" as supervisor 2`];
                                 const notification = await sendNotification(res, sendNotificationQuery, sendParams);
                                 const notificationReceived1 = await getNotificationReceived(res, thesisResultsAfter[0][i].lecturer1_id);
                                 

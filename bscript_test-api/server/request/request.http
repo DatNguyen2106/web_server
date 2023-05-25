@@ -73,7 +73,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgiLCJ1c2Vyb
 
 ###
 POST http://localhost:5000/admin/get/lecturers
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDAwLCJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6IltcImFkbWluXCJdIiwiaWF0IjoxNjgyMjY5NDg0LCJleHAiOjE2ODIyNzAzODR9.Zit9uXcMX7k0FkPdQdiTtb8BTOmJEZ2TeNB6sdNG93c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2ODQxNjMxMTAsImV4cCI6MTY4NDE2NDAxMH0.l6JMcUFYJEHFTJd0VTuN4kMCMw077VieF7qbYd7YdEY
 Content-Type: application/json
 
 {
@@ -83,7 +83,7 @@ Content-Type: application/json
     "email" : "",
     "supervisor" : "",
     "maximumTheses" : "",
-    "page" : "2"
+    "page" : "1"
 }
 ###
 POST http://localhost:5000/admin/update/signature
@@ -101,22 +101,21 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZ
 
 ###
 POST http://localhost:5000/admin/add/lecturer
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDAwLCJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6IltcImFkbWluXCJdIiwiaWF0IjoxNjgyMDkyNDU1LCJleHAiOjE2ODIwOTMzNTV9.uJEaynIz7Z3MEVMMDf-FmjuZGdI8eP0YDCvtymefZT4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2ODQ5NDQ3MjYsImV4cCI6MTY4NDk0NTYyNn0.M5afWMyaImHLHWoz_-gByvL7b7Bqk0s2OXEX3Ei8D1M
 Content-Type: application/json
 
 {
-    "id" : 21493,
-    "username" : "haotran1133",
+    "id" : 21492,
+    "username" : "haotran11331",
     "email" : "haotran@gmail.com",
-    "title" : "Dr. Hao Tran d",
+    "title" : "Dr. Hao Tran d23",
     "supervisor" : "lecturer1.2",
-    "signature" : "signature",
-    "bio" : "this is new bio"
+    "signature" : "signature"
 }
 
 ###
 PUT http://localhost:5000/admin/update/lecturer/21029
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2ODExNDY2MTMsImV4cCI6MTY4MTE0NzUxM30.LpWIzql2bA9Tvl4dm-yIgQ46f38JYW_Jakh5QMC6Ol0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAwMDAsInVzZXJuYW1lIjoibHVrYXMiLCJyb2xlIjoiW1wiYWRtaW5cIl0iLCJpYXQiOjE2ODQxMjQwMDYsImV4cCI6MTY4NDEyNDkwNn0.BA_kRCR42Vx_snXh6WIpF90x8RraAqK1818dACzabAU
 Content-Type: application/json
 
 {
