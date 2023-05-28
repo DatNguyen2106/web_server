@@ -11,7 +11,7 @@ student_get_router.post('/lecturers', verifyTokenStudent, async (req, res) => {
     try {
         var chunkForPage = 5;
         var lecturerId = (req.body.lecturerId === null || req.body.lecturerId === undefined || req.body.lecturerId === "") ? '%' : ('%' + req.body.lecturerId + '%');
-        var lecturerTitle = (req.body.lecturerTitle === "" || req.body.lecturerTitle === undefined || req.body.lecturerTitle === "") ? '%' : req.body.lecturerTitle;
+        var lecturerTitle = (req.body.lecturerTitle === "" || req.body.lecturerTitle === undefined || req.body.lecturerTitle === "") ? '%' :  ('%' + req.body.lecturerTitle + '%');
         var email = (req.body.email === "" || req.body.email === undefined || req.body.email === null) ? '%' : ('%' + req.body.email + '%');
         var supervisor = (req.body.supervisor === "" || req.body.supervisor === undefined || req.body.supervisor === null) ? '%' : ('%' + req.body.supervisor + '%');
         var isAvailable = (req.body.isAvailable === "" || req.body.isAvailable === undefined || req.body.isAvailable === null || req.body.isAvailable === true) ? req.body.isAvailable : false;
